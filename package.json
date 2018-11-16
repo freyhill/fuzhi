@@ -1,6 +1,6 @@
 {
   "name": "fuzhi",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "leinov",
   "description": "copy file and directory in node command",
   "repository": {
