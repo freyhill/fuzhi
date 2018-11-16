@@ -21,12 +21,12 @@ async function fuzhi(from, to) {
 		console.log(error("pleace input the file or directory you wanna copy"));
 		return ;
 	}
-	if(!to){
-		console.log(error("pleace  the target file or directory you wanna copy"));
-		return;
-	}
 	try{
 		await isExist(from);
+		if(!to){
+			console.log(error("pleace  the target file or directory you wanna copy"));
+			return;
+		}
 		const type = await pathType(argv[2]);
 		if(type == "file"){
 			copyFile(from ,to); // file copy
@@ -59,7 +59,7 @@ function copyFile(from, to) {
  * @param  {String} to
  */
 async function copyDir(from, to) {
-	console.log(chalk.magenta(`🏇  ${from} is copyed`));
+	console.log(chalk.magenta(`🏇  ${from} has been copied`));
 	try{
 		await isExist(to);
 	}catch(err){
@@ -72,7 +72,7 @@ async function copyDir(from, to) {
 			fs.stat(src,(err, stat)=> {
 				if(stat.isFile()) {
 					fs.writeFileSync(dist, fs.readFileSync(src));
-					console.log(chalk.magenta(`🏇  ${src} is copyed`));
+					console.log(chalk.magenta(`🏇  ${src} has been copied`));
 				} else if(stat.isDirectory()) {
 					copyDir(src, dist);
 				}
