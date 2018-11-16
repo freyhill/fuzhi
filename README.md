@@ -1,19 +1,21 @@
-# fuzhi
+# 👳fuzhi👳
+fuzhi means copy in chinese letter spell,this command is use to copy file or folder in terminal
 
-## use
+### use
 
 ```
-npm install fuzhi -g
+npm i fuzhi -g
 ```
 
-#### copy file
+### fuzhi a file
 
 ```
 fuzhi a.js b.js
 ```
 
-### copy directory
+### fuzhi a folder
 
 ```
-fuzhi a b
+fuzhi src dir
 ```
+👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️👨‍✈️

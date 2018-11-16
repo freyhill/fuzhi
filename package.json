@@ -1,8 +1,8 @@
 {
   "name": "fuzhi",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": "leinov",
-  "description": "copy file and directory by node command",
+  "description": "copy file and directory in node command",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:leinov/fuzhi.git"
