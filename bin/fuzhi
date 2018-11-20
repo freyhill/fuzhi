@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 /**********************************
-* @file:fuzhi
+* @file: fuzhi
 * @desc: a node copy cli
-* @author:leinov
-* @version:1.0.0
-* @date:2018-11-15 / 2018-11-20
+* @author: leinov
+* @version: 1.0.0
+* @date: 2018-11-15 / 2018-11-20
 ***********************************/
 
 const fs = require( "fs" );
