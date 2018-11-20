@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
-/******************
-* @file:copy cli
+/**********************************
+* @file:fuzhi
+* @desc: a node copy cli
 * @author:leinov
-* @date:2018-11-15
-*******************/
+* @version:1.0.0
+* @date:2018-11-15 / 2018-11-20
+***********************************/
 
 const fs = require( "fs" );
 const chalk = require("chalk");
@@ -22,6 +24,10 @@ async function fuzhi(from, to) {
 		return ;
 	}
 	try{
+		if(from === "--help"){
+			help();
+			return;
+		}
 		await isExist(from);
 		if(!to){
 			console.log(error("pleace  the target file or directory you wanna copy"));
@@ -122,6 +128,26 @@ function pathType(path){
 }
 
 /**
+ * help output
+ *
+ * @return {String}  help description
+ */
+function help(){
+	console.log(chalk.blueBright(`
+fuzhi: 0.08
+Usage: https://github.com/leinov/fuzhi
+
+options:
+[from] [to]       copy [from] file or directory to [to]
+
+example:
+fuzhi a.js b.js   copy a.js to b.js
+fuzhi dirA dirB   copy directory dirA to dirB
+
+		`));
+}
+
+/**
  * error output
  *
  * @param  {String} path
@@ -130,9 +156,11 @@ function pathType(path){
 function error(msg){
 	return chalk.red(`
 
-  ⛑ ⛑ ⛑
+⛑ ⛑ ⛑
 
-  error: ${msg}
+error: ${msg}
+
+Use --help to display the cli options.
   `);
 }
 
@@ -144,12 +172,12 @@ function error(msg){
  */
 function success(from,to){
 	return chalk.green(`
- ******************************************
- *
- * 💯
- *
- * ok: ${from} copy to ${to} success
- *
- ******************************************
+******************************************
+*
+* 💯
+*
+* ok: ${from} copy to ${to} success
+*
+******************************************
   `);
 }
