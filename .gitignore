@@ -2,7 +2,7 @@
 logs
 *.log
 npm-debug.log*
-
+.DS_Store
 # Dependency directories
 package-lock.json
 # Optional npm cache directory

@@ -13,7 +13,7 @@ const chalk = require("chalk");
 const argv = process.argv;
 
 /**
- * copy main function
+ *  copy main function
  *
  * @param  {String} from which file or directory you wanna copy
  * @param  {String} to   the target file or dir you copyed
